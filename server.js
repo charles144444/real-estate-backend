@@ -28,6 +28,9 @@ const pool = new Pool({
   database: process.env.PGDATABASE || 'real_estate_db',
   password: process.env.PGPASSWORD || 'securepassword',
   port: process.env.PGPORT || 5432,
+  ssl: {
+    rejectUnauthorized: false
+  }
 });
 
 // Handle database connection errors
